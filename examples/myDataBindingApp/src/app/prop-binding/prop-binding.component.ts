@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-prop-binding',
   templateUrl: './prop-binding.component.html',
   styleUrls: ['./prop-binding.component.css']
 })
-export class PropBindingComponent implements OnInit {
+export class PropBindingComponent {
   dynValue;
   constructor() {
      this.dynValue = "Dynamic Value";
    }
-
-  ngOnInit() {
-  }
 
   shouldApply() {
     return true;

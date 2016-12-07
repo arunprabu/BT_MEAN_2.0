@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ColorizerDirective } from './directives/colorizer.directive';
 import { EvtListenerDirective } from './directives/evt-listener.directive';
+import { ExampleDirDirective } from './example-dir.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorizerDirective,
-    EvtListenerDirective
+    EvtListenerDirective,
+    ExampleDirDirective
   ],
   imports: [
     BrowserModule,

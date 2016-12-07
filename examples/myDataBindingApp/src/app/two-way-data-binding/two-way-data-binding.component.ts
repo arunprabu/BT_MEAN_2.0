@@ -11,4 +11,6 @@ export class TwoWayDataBindingComponent {
     city: "Chennai"
   }
 
+  company = "BT";
+
 }

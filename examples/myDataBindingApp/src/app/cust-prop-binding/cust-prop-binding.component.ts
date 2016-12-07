@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cust-prop-binding.component.css']
 })
 export class CustPropBindingComponent {
-  @Input() someNumber = 10;
+  //@Input helps someNumber accept data from component that uses selector <app-custom-prop-binding>
+  @Input() someNumber = 10; 
 }

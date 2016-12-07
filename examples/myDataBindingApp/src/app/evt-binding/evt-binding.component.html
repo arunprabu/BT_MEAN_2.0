@@ -1,3 +1,10 @@
 <hr>
 <h3>Event Binding</h3>
 <p (click)="onTextClick()">Click here</p>
+
+<hr>
+
+<p>Another example. Let's learn Refs</p>
+<input type="text" #firstName>
+<button (click)="onBtnClick($event)">Send Just Event Obj</button>
+<button (click)="onSendClick($event, firstName.value)">Send Ref</button>

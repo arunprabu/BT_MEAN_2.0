@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
 // import { SidebarComponent } from './sidebar/sidebar.component';
 
 //This is the decorator - NgModule decorator
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent
     // ,
     // SidebarComponent
   ],
@@ -20,6 +22,6 @@ import { AppComponent } from './app.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent] //Step 3: this is where we tell angular that this is the root component for the index page.
+  bootstrap: [AppComponent] //Step 3: this is where we tell angular that AppComponent is the root component for the index page.
 })
 export class AppModule { }

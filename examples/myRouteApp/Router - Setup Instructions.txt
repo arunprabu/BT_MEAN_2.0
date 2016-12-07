@@ -1,0 +1,50 @@
+Routing Setup Instructions
+===========================
+    Registering Routes
+    -----------------
+Step 1: Create two components - namely home, products, 
+Step 2: Create app.routing.ts inside app/ directory and add the following lines in it
+        import { Routes, RouterModule } from "@angular/router";
+        const APP_ROUTES: Routes = [
+            { path: "", component: HomeComponent },
+            { path: "products", component: ProductsComponent }
+        ]
+
+        //register the routes in built-in router module
+        export const routing = RouterModule.forRoot(APP_ROUTES);
+
+Step 3: In app.module.ts, 
+        import { routing } from './app.routing';
+
+        and add routing in 
+            imports: [
+                ..,
+                ..,
+                routing
+            ]
+Step 4: Show the corresponding component in the page. In app.component.html add the following line
+        <router-outlet></router-outlet>
+
+        REFRESH THE page,
+        and navigate to, localhost:4200 and localhost:4200/products. pages should work fine.
+
+Step 5: Now, in app.component.html page, add the following links
+        <a [routerLink]="['']">Home</a>
+        <a [routerLink]="['/products']">Products</a>
+
+step 6: In product.component.html, 
+        <button type="button" (click)="onGoHomeClick()">Go Home</button>
+
+Step 7: Add a goto Home in products component
+        open up, products.component.ts file, and add the following.
+            
+            import {Router} from '@angular/router'
+            constructor(private router:Router ) { }
+
+            onGoHomeClick(){
+                this.router.navigate(['/']);
+            }
+
+Now, check it out
+-=-
+-----------------

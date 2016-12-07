@@ -1,6 +1,10 @@
 <hr>
 <h3>2 way data binding</h3>
 <p> {{trainer.fName}} </p>
-
+<p> {{trainer.city}} </p>
+<p> {{company}} </p>
 <p>Just to mock two way binding, lets have a text field 
 <input type="text" [(ngModel)] = "trainer.fName">
+<input type="text" [(ngModel)] = "trainer.city">
+
+<textarea [(ngModel)] = "company"></textarea>

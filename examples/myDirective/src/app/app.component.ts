@@ -17,7 +17,7 @@ export class AppComponent {
     'Contact'
   ]
 
-  age = 20;
+  age = 10;
   
   onToggle(){
     console.log("toggle");
