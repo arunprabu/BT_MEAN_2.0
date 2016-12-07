@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Please login to continue
+  form(name="login-form", method="post", action="/login")
+        div.input
+            span.label Mail
+            input(type="email", name="mail")
+        div.actions
+            input(type="submit", value="Login") 

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  div
+    p Data fetched from DB
+    p FirstName: #{doc.firstName} 
+    p LastName:#{doc.lastName} 
+    p Email: #{doc.email}
+    br
+
+  form(name="message-form", method="post", action="/")
+        div.input
+            span.label First Name
+            br
+            input(type="text", name="firstName")
+        div.input
+            span.label Last Name
+            br
+            input(type="text", name="lastName")
+        div.input
+            span.label Email
+            br
+            input(type="email", name="email")
+         div.input
+            span.label Password
+            br
+            input(type="password", name="password")
+        div.actions
+            input(type="submit", value="Post") 
